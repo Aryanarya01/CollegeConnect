@@ -26,23 +26,26 @@ const Login = () => {
         <h1>Login Page</h1>
         <form onSubmit={handelSubmit}> 
         <div>
-          <label>Email:</label>
+          <label class="form-label">Email:</label>
           <input
             onChange={(e) => setEmailLog(e.target.value)}
             type="text"
             name="email"
+            class="form-control"
           />
         </div>
         <div>
-          <label>Password:</label>
+          <label class="form-label">Password:</label>
           <input
             onChange={(e) => setPasswordLog(e.target.value)}
             type="password"
             name="password"
+            class="form-control"
           />
         </div>
-        <button type='submit'>Login</button>
+        <button type='submit' class="btn btn-primary">Login</button>
         </form>
+        <p>Don't have an account? <a href="/register">Register</a></p>
     </div>
   )
 }

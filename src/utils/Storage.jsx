@@ -27,3 +27,14 @@ export const getLoggedInUser = ()=>{
 export const logoutUser = ()=>{
     localStorage.removeItem("LoggedInUser");
 }
+
+
+ export const createPost = (post) => {
+    const posts = JSON.parse(localStorage.getItem("posts")) || [];
+    posts.push(post);
+    localStorage.setItem("posts",JSON.stringify(posts));
+ }
+
+ export const getAllPosts = ()=>{
+    return JSON.parse(localStorage.getItem("posts")) || [];
+ }

@@ -1,16 +1,24 @@
 import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
- import Signup from './Pages/Signup';
- import Home from './Pages/Home';
- import Login from './Pages/Login';
+import Signup from "./Pages/Signup";
+import Home from "./Pages/Home";
+import Login from "./Pages/Login";
+import CreatePost from "./Pages/CreatePost";
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
+import Feed from "./Pages/Feed";
+import MyPost from "./Pages/MyPost";
 function App() {
   return (
     <>
       <Routes>
         <Route path="/home" element={<Home />} />
-    <Route path="/signup" element={<Signup />} />
-    <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/createpost" element={<CreatePost />} />
+        <Route path="*" element={<Signup />} />
+        <Route path="/feed" element={<Feed />} />
+        <Route path="/mypost" element={<MyPost />} />
+
       </Routes>
     </>
   );

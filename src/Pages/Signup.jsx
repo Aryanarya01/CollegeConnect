@@ -30,31 +30,35 @@ const Signup = () => {
       <h1>Signup Page</h1>
       <form onSubmit={handelsubmit}>
         <div>
-          <label>Name:</label>
+          <label   class="form-label">Name:</label>
           <input
+          class="form-control"
             onChange={(e) => setName(e.target.value)}
             type="text"
             name="name"
           />
         </div>
         <div>
-          <label>Email:</label>
+          <label  class="form-label">Email:</label>
           <input
+            class="form-control"
             onChange={(e) => setEmail(e.target.value)}
             type="text"
             name="email"
           />
         </div>
         <div>
-          <label>Password:</label>
+          <label class="form-label">Password:</label>
           <input
+            class="form-control"
             onChange={(e) => setPassword(e.target.value)}
             type="password"
             name="password"
           />
         </div>
-        <button type="submit">Signup</button>
+        <button type="submit" class="btn btn-primary">Signup</button>
       </form>
+      <p>Already have an account? <a href="/login">Login</a></p>
     </div>
   );
 };
