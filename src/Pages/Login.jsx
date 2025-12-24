@@ -18,7 +18,7 @@ const Login = () => {
         }
     }
     if(loginStatus){
-        return <Navigate to ="/home"/>
+        return <Navigate to ="/feed"/>
     }
 
   return (
