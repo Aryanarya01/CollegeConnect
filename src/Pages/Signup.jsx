@@ -26,39 +26,48 @@ const Signup = () => {
   }
 
   return (
-    <div>
-      <h1>Signup Page</h1>
-      <form onSubmit={handelsubmit}>
+    <div className="signup-page"> 
+    <div className="container signup">
+      <h1>Sign Up for Campus Connect</h1>
+      <p>Create your account to get started.</p>
+      <form className="signform" onSubmit={handelsubmit}>
         <div>
-          <label   class="form-label">Name:</label>
+          <label htmlFor="name" class="form-label">Name:</label>
           <input
+          placeholder="Enter your name"
           class="form-control"
             onChange={(e) => setName(e.target.value)}
             type="text"
             name="name"
+            id="name"
           />
         </div>
         <div>
-          <label  class="form-label">Email:</label>
+          <label htmlFor="email" class="form-label">Email:</label>
           <input
+          placeholder="name@example.com"
             class="form-control"
             onChange={(e) => setEmail(e.target.value)}
             type="text"
             name="email"
+            id="email"
           />
         </div>
         <div>
-          <label class="form-label">Password:</label>
+          <label htmlFor="password" class="form-label">Password:</label>
           <input
+          placeholder="Enter your password"
             class="form-control"
             onChange={(e) => setPassword(e.target.value)}
             type="password"
             name="password"
+            id="password"
           />
         </div>
-        <button type="submit" class="btn btn-primary">Signup</button>
+        <button style={{marginTop:"1rem",fontWeight:"500",backgroundColor:"rgba(241, 172, 42, 1)",width:"8rem"}} type="submit" class="btn">Signup</button>
       </form>
-      <p>Already have an account? <a href="/login">Login</a></p>
+      <p>Already have an account? <a style={{textDecoration:"none"}} href="/login">Login here</a></p>
+    </div>
     </div>
   );
 };

@@ -51,3 +51,27 @@ nav.navbar .nav-link{
     color: white;
     margin-top: 150px;
 }
+.signup{
+    width: 600px;
+    margin-top: 5rem;
+    text-align: center;
+}
+.signform{
+    margin-top: 30px;
+    padding: 2rem;
+    border: 1px solid grey;
+    border-radius: 12px;
+}
+.signform label{
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: start;
+}
+.signup-page{
+    
+    height: 100vh;
+   background: linear-gradient(135deg,#eef2ff,#f8fafc);
+    display: flex;
+    justify-content: center;    
+}
