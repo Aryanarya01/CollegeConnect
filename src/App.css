@@ -75,3 +75,11 @@ nav.navbar .nav-link{
     display: flex;
     justify-content: center;    
 }
+.NotFound{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background: linear-gradient(135deg,#eef2ff,#f8fafc);
+}

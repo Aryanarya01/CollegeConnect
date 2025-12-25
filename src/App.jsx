@@ -6,6 +6,7 @@ import Login from "./Pages/Login";
 import CreatePost from "./Pages/CreatePost";
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import Feed from "./Pages/Feed";
+import NotFound from "./Pages/NotFound";
 import MyPost from "./Pages/MyPost";
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route path="/createpost" element={<CreatePost />} />
-        <Route path="*" element={<Home />} />
+        <Route path="*" element={<NotFound />} />
         <Route path="/feed" element={<Feed />} />
         <Route path="/mypost" element={<MyPost />} />
 

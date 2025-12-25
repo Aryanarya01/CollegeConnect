@@ -29,31 +29,36 @@ const CreatePost = () => {
     navigate("/feed");
   };
   return (
-    <div>
-      <h1>Create Post Page</h1>
-      <form onSubmit={handelSubmit}>
+    <div className="signup-page"> 
+    <div className="container signup">
+      <h1>Create a New Post</h1>
+      <p>Share what's happening with your campus community</p>
+       <form className='signform' onSubmit={handelSubmit}> 
         <div>
-          <label className="form-label">Title:</label>
+          <label htmlFor='title' class="form-label">Title:</label>
           <input
+          placeholder='About your post'
             onChange={(e) => setTitle(e.target.value)}
             type="text"
             name="title"
-            className="form-control"
+            class="form-control"
+            id='title'
           />
         </div>
         <div>
-          <label className="form-label">Content:</label>
+          <label htmlFor='content' class="form-label">Content:</label>
           <input
+          placeholder="What's on your mind?"
             onChange={(e) => setContent(e.target.value)}
             type="text"
             name="content"
-            className="form-control"
+            class="form-control"
+            id='content'
           />
         </div>
-        <button type="submit" className="btn btn-primary">
-          Create Post
-        </button>
-      </form>
+        <button type='submit' class="btn" style={{marginTop:"1rem",fontWeight:"500",backgroundColor:"rgba(241, 172, 42, 1)",width:"8rem"}} >Post</button>
+        </form>
+    </div>
     </div>
   );
 };
