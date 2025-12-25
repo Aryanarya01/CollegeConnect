@@ -22,41 +22,21 @@ const Feed = () => {
 }   
   return (
     <div className="feed">
-      {/* <nav className="navbar navbar-expand-lg custom-navbar">
-        <div className="container-fluid">
-          <NavLink className="navbar-brand" to="/home">
-            Campus Connect
-          </NavLink>
-          <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div className="navbar-nav">
-              <NavLink className="nav-link" to="/mypost">
-                My Posts
-              </NavLink>
-              <NavLink className="nav-link" to="/createpost">
-                Create Post
-              </NavLink>
-              <NavLink className="nav-link" to="/login">
-                Profile
-              </NavLink>
-              <button className="nav-link btn btn-link" onClick={handelLogout}>
-                Logout
-              </button>
-            </div>
-          </div>
-        </div>
-      </nav> */}
+     
 <nav className="navbar navbar-expand-lg ">
   <div className="container-fluid">
-    <NavLink className="navbar-brand" to="/home">
+    <NavLink style={{fontWeight:"700",color:"white"}} className="navbar-brand" to="/home">
       Campus Connect
     </NavLink>
 
-    <div className="navbar-nav">
+    <div className="feedNav navbar-nav">
       <NavLink className="nav-link" to="/mypost">My Posts</NavLink>
+       <span className="nav-separator">|</span>
       <NavLink className="nav-link" to="/createpost">Create Post</NavLink>
+       <span className="nav-separator">|</span>
       <NavLink className="nav-link" to="/profile">Profile</NavLink>
-
-      <button className="btn btn-danger ms-2" onClick={handelLogout}>
+       <span className="nav-separator">|</span>
+      <button style={{color:"white",fontWeight:"600"}} className="btn ms-2" onClick={handelLogout}>
         Logout
       </button>
     </div>
@@ -64,10 +44,12 @@ const Feed = () => {
 </nav>
 
       <div className="feed-header">
-        <h1>Welcome, {user.name}</h1>
-        <button onClick={()=>navigate("/createpost")} type="button" className="btn btn-primary">
-          + Create New Post
-        </button>
+        <div className="inner-feed-header">
+          <h1>Welcome, {user.name}!</h1>
+          <button onClick={()=>navigate("/createpost")} type="button" style={{margin:"1rem",width:"11rem",backgroundColor:"green",fontWeight:"600",color:"white"}} className="btn">
+            + Create New Post
+          </button>
+        </div>
       </div>
       <h1>Feeds</h1>
       {posts.length === 0 ? (

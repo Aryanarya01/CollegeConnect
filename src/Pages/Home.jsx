@@ -1,6 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Login from "./Login";
+import Signup from "./Signup";
+import { NavLink } from "react-router-dom";
 const Home = () => {
   const navigate = useNavigate();
   const handelJoin = () => {
@@ -8,20 +10,21 @@ const Home = () => {
   };
 
   return (
-    <div className=" constainer background">
+    <div className="constainer background">
       <nav className="navbar navbar-expand-lg custom-navbar">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
+          <NavLink style={{fontWeight:"700",color:"white"}} className="navbar-brand" to="#">
             Campus Connect
-          </a>
+          </NavLink>
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div className="navbar-nav">
-              <a className="nav-link" href="/login">
-                Login
-              </a>
-              <a className="nav-link" href="/signup">
+            <div className="homeNav navbar-nav">
+              <NavLink className="nav-link" to="/login">
+                Login 
+              </NavLink>
+                <span className="nav-separator">|</span>
+              <NavLink className="nav-link" to="/signup">
                 SignUp
-              </a>
+              </NavLink>
             </div>
           </div>
         </div>
@@ -29,20 +32,29 @@ const Home = () => {
       <div className="main-content">
         <h1
           style={{
-            backgroundColor: "rgba(0,0,0,0.6)",
+            backgroundColor: "rgba(0,0,0,0.5)",
             margin: "0",
-            padding: "12px 20px",
+            padding: "12px 30px",
             color: "white",
-            
-    display: "inline-block",
-               borderRadius: "6px",
+            width: "fit-content",
+            borderRadius: "4px",
           }}
         >
-          Welcome to Home Page
+          Welcome to Campus Connect
         </h1>
-        <h3>Connect to your college Community</h3>
+        <h4
+          style={{
+            backgroundColor: "rgba(0,0,0,0.3)",
+            padding: "8px 30px",
+            width: "fit-content",
+            color: "white",
+            borderRadius: "4px",
+          }}
+        >
+          Connect to your college Community.
+        </h4>
 
-        <button type="button" onClick={handelJoin} class="btn btn-primary">
+        <button style={{margin:"1rem",width:"11rem",backgroundColor:"green",fontWeight:"700",color:"white"}} type="button" onClick={handelJoin} class="btn">
           Join Now
         </button>
       </div>

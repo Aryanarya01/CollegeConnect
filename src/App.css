@@ -1,11 +1,25 @@
 nav.navbar{
-    
     background-color: #0f172a!important ;
  }
 nav.navbar .nav-link{
     color: white!important;
 }
+.homeNav {
+    margin-left: auto;
+    margin-right: 30px;
+    font-weight: 600;
+}
+.feedNav{
+      margin-right: 30px;
+    font-weight: 600;
+}
    
+.nav-separator{
+  color: grey;
+  margin: 0 8px;
+  align-self: center;
+  font-weight: 600;
+}
 .background{
     background-image: url("./assets/back.jpeg");
     height: 100vh;
@@ -15,7 +29,6 @@ nav.navbar .nav-link{
 }
 .feed{
     height: 100vh;
-    margin: 20px;
     overflow-y: scroll;
 }   
 .feed-header{
@@ -26,8 +39,15 @@ nav.navbar .nav-link{
     color: white;
     height: 300px;
 }
+.inner-feed-header{
+    
+   
+    padding-left: 6rem;
+     
+    padding-top: 70px;
+}
 .main-content{
-    text-align: center;
+     margin-left: 6rem;
     color: white;
     margin-top: 150px;
 }
