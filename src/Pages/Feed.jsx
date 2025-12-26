@@ -25,7 +25,7 @@ const Feed = () => {
      
 <nav className="navbar navbar-expand-lg ">
   <div className="container-fluid">
-    <NavLink style={{fontWeight:"700",color:"white"}} className="navbar-brand" to="/home">
+    <NavLink style={{fontWeight:"700",color:"white"}} className="navbar-brand"  >
       Campus Connect
     </NavLink>
 

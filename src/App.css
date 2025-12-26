@@ -90,3 +90,12 @@ nav.navbar .nav-link{
     width: 90%;
     margin: auto;
   }
+
+
+.mypost-page li {
+   background-color:darkgray ;
+    border-radius: 8px;
+    color:black;
+    width: 90%;
+    margin: auto;
+  }

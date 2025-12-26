@@ -8,6 +8,7 @@ import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import Feed from "./Pages/Feed";
 import NotFound from "./Pages/NotFound";
 import MyPost from "./Pages/MyPost";
+import Profile from "./Pages/Profile";
 function App() {
   return (
     <>
@@ -20,7 +21,7 @@ function App() {
         <Route path="*" element={<NotFound />} />
         <Route path="/feed" element={<Feed />} />
         <Route path="/mypost" element={<MyPost />} />
-
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </>
   );
