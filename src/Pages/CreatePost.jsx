@@ -20,7 +20,7 @@ const CreatePost = () => {
       content: content,
       author: loggedInUser.name,
       email: loggedInUser.email,
-      createdAt: new Date().toISOString(),
+      createdAt: new Date().toLocaleString(),
     };
     createPost(post);
     alert("Post Created Successfully");

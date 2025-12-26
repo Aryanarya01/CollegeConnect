@@ -51,30 +51,35 @@ const Feed = () => {
           </button>
         </div>
       </div>
-      <h1>Feeds</h1>
+      <h1 style={{marginLeft:"6rem"}}>Community Feed</h1>
       {posts.length === 0 ? (
         <p>No posts available.</p>
       ) : (
-        <ul>
-          {posts.map((post) => (
-            <li
-              key={post.id}
-              style={{
-                padding: "10px",
-                marginBottom: "8px",
-                border: "1px solid red",
-              }}
-            >
-              <h3>{post.title}</h3>
-              <p>{post.content}</p>
-              <p>{post.email}</p>
-              <p>{post.createdAt}</p>
-              <p>
-                <strong>Author:</strong> {post.author}
-              </p>
-            </li>
-          ))}
-        </ul>
+        <div className="post-list">
+          <ul style={{ listStyleType: "none", padding: 0 }}>
+            {posts.map((post) => (
+              <li
+                key={post.id}
+                style={{
+                  padding: "10px",
+                  marginBottom: "8px",
+                  border: "1px solid grey",
+          
+                }}
+              >
+                 <p>
+                  <strong></strong> {post.author}
+                </p>
+                <h4>{post.title}</h4>
+                <p>{post.createdAt}</p>
+                <p>{post.content}</p>
+          
+          
+          
+              </li>
+            ))}
+          </ul>
+        </div>
       )}
     </div>
   );
